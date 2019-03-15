@@ -7,8 +7,6 @@
     Java
 
 3. 구성
-    20143127_박연우(디렉토리): checksum(디렉토리), crc(디렉토리), manual_20143127.txt
-
     Checksum(디렉토리): checksum.java, makefile, test_20143127.txt
 
     CRC(디렉토리): crc.java, makefile, test_20143127.txt
