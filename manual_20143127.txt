@@ -1,0 +1,55 @@
+### 본 문서는 checksum, crc 프로그램에 관한 내용이다.
+
+1. 실행 환경
+    Windows 10 64bit
+
+2. 언어
+    Java
+
+3. 구성
+    20143127_박연우(디렉토리): checksum(디렉토리), crc(디렉토리), manual_20143127.txt
+
+    Checksum(디렉토리): checksum.java, makefile, test_20143127.txt
+
+    CRC(디렉토리): crc.java, makefile, test_20143127.txt
+
+4. 조건
+    1) 공통
+        ㄱ. even parity bit는 우측에 추가
+            1100100 -> 1100100 1
+            0011000 -> 0011000 0
+        ㄴ. 입력: input.txt
+        ㄷ. 출력: output_XXXXXXX.txt
+        ㄹ. 입출력 파일의 경로는 소스파일의 디렉토리와 동일
+
+    1) Checksum
+        ㄱ. 16비트 단위로 계산하기 때문에 남은 홀수번째 데이터를 버림
+            ex) Abbc3(입력문자) --> Abbc만을 가지고 Checksum 계산
+        ㄴ. 16비트 단위로 계산하기 때문에 입력이 한글자일 경우 처리하지 않음.  
+            ex) A(입력문자) --> 16비트 이상 입력 메시지
+
+    2) CRC
+        ㄱ. 제수(Divisor)는 11000000000000101 사용 
+
+5. 사용법
+    1) Checksum
+        ㄱ. make
+        ㄴ. make rw(윈도우용) or make rl(리눅스, 맥용)
+
+        또는
+
+        ㄱ. javac checksum.java
+        ㄴ. java checksum
+
+    2) CRC
+        ㄱ. make
+        ㄴ. make rw(윈도우용) or make rl(리눅스, 맥용)
+
+        또는
+
+        ㄱ. javac crc.java
+        ㄴ. java crc
+
+
+
+    
